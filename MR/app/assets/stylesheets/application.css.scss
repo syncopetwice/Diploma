@@ -1,0 +1,41 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import 'bootstrap';
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,100,300);
+@import url(https://fonts.googleapis.com/css?family=Oswald:400,700,300);
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-family: 'Raleway', sans-serif;
+	min-height: 100vh;
+	padding-top: 20px;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#4cb8c4+0,3cd3ad+100 */
+	background: #4cb8c4; /* Old browsers */
+	background: -moz-linear-gradient(-45deg,  #4cb8c4 0%, #3cd3ad 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(-45deg,  #4cb8c4 0%,#3cd3ad 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(135deg,  #4cb8c4 0%,#3cd3ad 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4cb8c4', endColorstr='#3cd3ad',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+#app {
+	width: 980px;
+	background: rgba(255,255,255,.75);
+	border-radius: 4px;
+	margin: 0 auto;
+	min-height: 90vh;
+	padding: 15px;
+	padding-top: 30px;
+}
