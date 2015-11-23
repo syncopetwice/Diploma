@@ -3,61 +3,15 @@
 		<img src="<%= image_url('backbone.png') %>" alt="">
 	</div>
 	<!-- User -->
-	<div id="user-region">
-		
-	</div>
+	<div id="user-region"></div>
 	<!-- End :: User -->
-	<!-- Menu -->
-	<nav id="menu">
-		<ul>
-			<li>
-				<a href="#">
-					<i class="ion-arrow-graph-up-right"></i>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<i class="ion-pie-graph"></i>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<i class="ion-connection-bars"></i>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<i class="ion-android-folder"></i>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<i class="ion-navicon"></i>
-				</a>
-			</li>
-		</ul>
-	</nav>
-	<!-- End :: Menu -->
-	<!-- Charts -->
-	<div id="charts-region">
-		
-	</div>
-	<!-- End :: Charts -->
-	<!-- Opportunity Review -->
-	<div id="opportunityReview-region">
-		
-	</div>
-	<!-- End :: Opportunity Review -->
-	<!-- Account Review -->
-	<div id="accountReview-region">
-		
-	</div>
-	<!-- End :: Account Review -->
-
+	<!-- Opportunity List -->
+	<div id="oppList-region"></div>
+	<!-- End :: Opportunity List -->
 </div>
 
 <%= javascript_tag do %>
 	$(function() {
-		A.start();
+		MR.start();
 	});
 <% end %>

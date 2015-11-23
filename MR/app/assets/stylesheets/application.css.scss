@@ -19,31 +19,22 @@
 body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	font-family: 'Raleway', sans-serif;
 	min-height: 100vh;
 	padding-top: 20px;
 }
-
 #app {
-	width: 980px;
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#4cb8c4+0,3cd3ad+100 */
-	background: #4cb8c4; /* Old browsers */
-	background: -moz-linear-gradient(-45deg,  #4cb8c4 0%, #3cd3ad 100%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(-45deg,  #4cb8c4 0%,#3cd3ad 100%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(135deg,  #4cb8c4 0%,#3cd3ad 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4cb8c4', endColorstr='#3cd3ad',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-	border-radius: 4px;
+	width: 1300px;
 	margin: 0 auto;
 	min-height: 90vh;
 	padding: 15px;
-	padding-top: 30px;
+	padding-top: 20px;
 	.logotype {
 		text-align: center;
 		img {
 			display: inline-block;
 			margin: 0 auto 20px auto;
 			max-width: 100%;
-			width: 120px;
+			width: 50px;
 		}
 	}
 }
