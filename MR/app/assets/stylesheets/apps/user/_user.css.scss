@@ -1,0 +1,23 @@
+#user {
+	padding: 15px;
+	border-radius: 6px;
+	background:#f7f7f7;
+	margin-bottom: 20px;
+	h2 {
+		margin-top: 0;
+	}
+	.avatar {
+		display: block;
+		width: 100px;
+		margin-bottom: 10px;
+	}
+	.data {
+		margin-bottom: 10px;
+		div {
+			font-weight: bold;
+			span {
+				font-weight: normal;
+			}
+		}
+	}
+}

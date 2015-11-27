@@ -1,0 +1,21 @@
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Account</th>
+			<th>Amount</th>
+			<th>Stage</th>
+			<th>Close Date</th>
+			<th>Internal Strategic Value</th>
+			<th>External Strategic Value</th>
+			<th>Win Probability</th>
+			<th>Representative</th>
+		</tr>
+	</thead>
+	<tbody class="tbody"></tbody>
+	<tfoot>
+		<tr class="text-center">
+			<td colspan="9"><a href="#">go to list</a></td>
+		</tr>
+	</tfoot>
+</table>
