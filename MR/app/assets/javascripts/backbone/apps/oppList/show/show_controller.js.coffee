@@ -46,7 +46,8 @@
 				}
 			]
 
-
 		getOppListView: (data) ->
 			new Show.OppListTable
 				collection: data
+
+

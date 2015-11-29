@@ -1,13 +1,29 @@
 <div id="app">
-	<div class="logotype">
-		<img src="<%= image_url('backbone.png') %>" alt="">
-	</div>
-	<!-- User -->
-	<div id="user-region"></div>
-	<!-- End :: User -->
-	<!-- Opportunity List -->
-	<div id="oppList-region"></div>
-	<!-- End :: Opportunity List -->
+	<header>
+		<div class="logotype">
+			<img src="<%= image_url('backbone.png') %>" alt="">
+		</div>
+		<h1>Backbone/Marionette on Rails</h1>
+	</header>
+	<main>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<!-- User -->
+					<div id="user-region"></div>
+					<!-- End :: User -->
+				</div>
+			</div>
+		</div>
+		<!-- Opportunity List -->
+		<div id="oppList-region"></div>
+		<!-- End :: Opportunity List -->
+	</main>
+	<footer>
+		<div class="text-center">
+			Created by Oleg Drozdov. 2015
+		</div>
+	</footer>
 </div>
 
 <%= javascript_tag do %>
