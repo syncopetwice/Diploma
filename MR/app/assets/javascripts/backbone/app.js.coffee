@@ -5,12 +5,14 @@
 	App.rootRoute = "user"
 
 	App.addRegions
-		userRegion: '#user-region'
-		oppListRegion: '#oppList-region'
+		UserDetailsRegion: '#user-details-region'
+		OpportunityReviewRegion: '#opportunity-review-region'
+		AccountReviewRegion: "#account-review-region"
 
 	App.addInitializer ->
-		App.module("UserApp").start()
-		App.module("OppListApp").start()
+		App.module("UserDetails").start()
+		App.module("OpportunityReview").start()
+		App.module("AccountReview").start()
 
 	App.on "start", ->
 		if Backbone.history
