@@ -8,3 +8,10 @@
 		template: "OpportunityReview/show/templates/table"
 		childView: Show.OpportunityReviewRow
 		childViewContainer: "tbody"
+
+		events:
+			'click a[data-filter]': 'filterBy'
+
+		filterBy: (event) ->
+			event.preventDefault()
+			console.log "Filter By #{$(event.target).data('filter')}"

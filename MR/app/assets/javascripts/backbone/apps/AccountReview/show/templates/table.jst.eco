@@ -1,12 +1,13 @@
+<h4 class="text-center">Account Review</h4>
 <table class="table table-striped table-filled">
 	<thead>
 		<tr>
-			<th>Name</th>
-			<th>Account</th>
-			<th>Strategy</th>
-			<th>Last Update</th>
-			<th></th>
-			<th></th>
+			<th><a href="#" data-filter="">Name</a></th>
+			<th><a href="#" data-filter="">Account</a></th>
+			<th><a href="#" data-filter="">Strategy</a></th>
+			<th><a href="#" data-filter="">Last Update</a></th>
+			<th><a href="#" data-filter="">Owner</a></th>
+			<th><a href="#" data-filter="">Account Health Score</a></th>
 		</tr>
 	</thead>
 	<tbody class="tbody"></tbody>

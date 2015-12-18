@@ -1,15 +1,16 @@
+<h4 class="text-center">Opportunity Review</h4>
 <table class="table table-striped table-filled">
 	<thead>
 		<tr>
-			<th>Name</th>
-			<th>Account</th>
-			<th>Amount</th>
-			<th>Stage</th>
-			<th>Close Date</th>
-			<th>Internal Strategic Value</th>
-			<th>External Strategic Value</th>
-			<th>Win Probability</th>
-			<th>Representative</th>
+			<th><a href="#" data-filter="name">Name</a></th>
+			<th><a href="#" data-filter="account">Account</a></th>
+			<th><a href="#" data-filter="amount">Amount</a></th>
+			<th><a href="#" data-filter="stage">Stage</a></th>
+			<th><a href="#" data-filter="closeDate">Close Date</a></th>
+			<th><a href="#" data-filter="internalStrategicValue">Internal Strategic Value</a></th>
+			<th><a href="#" data-filter="externalStrategicValue">External Strategic Value</a></th>
+			<th><a href="#" data-filter="winProbability">Win Probability</a></th>
+			<th><a href="#" data-filter="representative">Representative</a></th>
 		</tr>
 	</thead>
 	<tbody class="tbody"></tbody>

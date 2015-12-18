@@ -2,8 +2,5 @@
 <td><a href="#"><%= @account %></a></td>
 <td><%= @strategy %></td>
 <td><%= @lastUpdate %></td>
-<td><%= @closeDate %></td>
-<td><%= @internalStrategicValue %></td>
-<td><%= @externalStrategicValue %></td>
-<td><%= @winProbability %></td>
-<td><a href="#"><%= @representative %></a></td>
+<td><a href="#"><%= @owner %></a></td>
+<td><%= @accountHealthScore %></td>

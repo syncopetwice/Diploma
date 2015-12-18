@@ -16,18 +16,24 @@
 					account: "Burlington Textiles Corp of America"
 					strategy: ""
 					lastUpdate: "4/17/2013"
+					owner: "1"
+					accountHealthScore: "2"
 				}
 				{
 					name: "Burlington - Zippers 250K"
 					account: "Burlington Textiles Corp of America"
 					strategy: ""
 					lastUpdate: "4/17/2013"
+					owner: "1"
+					accountHealthScore: "2"
 				}
 				{
 					name: "Burlington - Packaging"
 					account: "Burlington Textiles Corp of America"
 					strategy: ""
 					lastUpdate: "4/17/2013"
+					owner: "1"
+					accountHealthScore: "2"
 				}
 			]
 
