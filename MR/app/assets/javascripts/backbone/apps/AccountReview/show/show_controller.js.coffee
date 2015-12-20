@@ -2,10 +2,10 @@
 
 	Show.Controller =
 
-		showAccountReview: ->
+		show: ->
 			data = @getData()
 
-			view = @getAccountReviewView data
+			view = @getView data
 
 			App.AccountReviewRegion.show view
 
@@ -37,8 +37,8 @@
 				}
 			]
 
-		getAccountReviewView: (data) ->
-			new Show.AccountReviewTable
+		getView: (data) ->
+			new Show.Table
 				collection: data
 
 

@@ -13,7 +13,12 @@
 	<tbody class="tbody"></tbody>
 	<tfoot>
 		<tr class="text-center">
-			<td colspan="9"><a href="#" class="goto"><i class="fa fa-folder-open-o fa-lg"></i>Go To List</a></td>
+			<td colspan="9">
+				<button type="button" class="js-go-to-list btn btn-default">
+					<i class="fa fa-folder-open-o fa-lg"></i>
+					Go To List
+				</a>
+			</td>
 		</tr>
 	</tfoot>
 </table>

@@ -1,3 +1,5 @@
-<h4 class="text-center">Charts</h4>
-<div class="charts"></div>
-<div class="ct-chart ct-perfect-fourth"></div>
+<h4 class="text-center">Charts <button type="button" class="js-refresh-charts btn btn-default"><i class="fa fa-refresh"></i></button></h4>
+<div class="charts">
+	<div class="chart ct-chart ct-perfect-fourth"></div>
+	<div class="chart ct-chart-2 ct-perfect-fourth"></div>
+</div>

@@ -3,8 +3,8 @@
 	@startWithParent = false
 
 	API = 
-		showAccountReview: ->
-			AccountReview.Show.Controller.showAccountReview()
+		show: ->
+			AccountReview.Show.Controller.show()
 
 	AccountReview.on "start", ->
-		API.showAccountReview()
+		API.show()
