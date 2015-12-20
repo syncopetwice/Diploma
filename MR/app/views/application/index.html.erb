@@ -9,12 +9,11 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<!-- User -->
 					<div id="user-details-region"></div>
-					<!-- End :: User -->
 				</div>
 			</div>
 		</div>
+		<div id="charts-region"></div>
 		<div id="opportunity-review-region"></div>
 		<div id="account-review-region"></div>
 	</main>
@@ -27,6 +26,10 @@
 
 <%= javascript_tag do %>
 	$(function() {
-		MR.start();
+		var options = {
+			history: true,
+		};
+
+		MR.start(options);
 	});
 <% end %>

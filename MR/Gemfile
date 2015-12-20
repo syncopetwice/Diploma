@@ -15,6 +15,7 @@ gem 'eco'
 gem 'bootstrap-sass-rails'
 gem "font-awesome-rails"
 gem 'autoprefixer-rails', '~> 6.1', '>= 6.1.0.1'
+gem 'chartist-rails'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
 

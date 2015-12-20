@@ -13,8 +13,9 @@
  *= require_tree .
  *= require_self
  */
-@import 'bootstrap';
+@import "bootstrap";
 @import "font-awesome";
+@import "chartist.min";
 @import url(https://fonts.googleapis.com/css?family=Oswald:400,700,300);
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,700,300);
 body {
@@ -44,6 +45,9 @@ table {
 			text-decoration: none;
 			color: #333333;
 		}
+	}
+	.fa-folder-open-o {
+		margin-right: 5px;
 	}
 }
 #app {

@@ -50,7 +50,7 @@
 				}
 			]
 
-		getOpportunityReviewView: (data) ->
+		getView: (data) ->
 			new Show.OpportunityReviewTable
 				collection: data
 
@@ -58,7 +58,7 @@
 			new SortedCollection(data)
 				.setSort(filter)
 
-		showOpportunityReview: ->
+		show: ->
 			data = @getData()
-			view = @getOpportunityReviewView data
+			view = @getView data
 			App.OpportunityReviewRegion.show view
