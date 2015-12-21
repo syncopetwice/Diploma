@@ -9,9 +9,19 @@
 		childView: Show.OpportunityReviewRow
 		childViewContainer: "tbody"
 
+		ui:
+			list: ".js-list"
+			filter: "a[data-filter]"
+
 		events:
-			'click a[data-filter]': 'filterBy'
+			"click @ui.list" : "list"
+			"click @ui.filter": "filterBy"
+
+		list: ->
+			@trigger "opp:list"
+			console.log 'Opp List click'
 
 		filterBy: (event) ->
 			event.preventDefault()
-			console.log "Filter By #{$(event.target).data('filter')}"
+			@trigger "opp:filter"
+			console.log "Filtered By #{$(event.target).data('filter')}"

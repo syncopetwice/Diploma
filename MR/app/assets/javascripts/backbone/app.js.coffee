@@ -24,4 +24,7 @@
 		else
 			throw new Error ("History is off")
 
+	App.vent.on "account:list", ->
+		console.log "Account List"
+
 	App

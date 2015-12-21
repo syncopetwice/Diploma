@@ -26,8 +26,12 @@
 	<div class="row">
 		<div class="col-md-12">
 			<div class="buttons">
-				<a href="#" class="btn btn-default">View Full</a>
-				<a href="#" class="btn btn-primary">Edit</a>
+				<a href="#" class="btn btn-default">
+					<i class="fa fa-arrows-alt"></i>
+				</a>
+				<a href="#" class="btn btn-default">
+					<i class="fa fa-pencil"></i>
+				</a>
 			</div>
 		</div>
 	</div>

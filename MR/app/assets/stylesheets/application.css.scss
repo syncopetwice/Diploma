@@ -26,34 +26,11 @@ body {
 	font-family: 'Roboto', sans-serif;
 	background:#f8f8f8;
 }
-table {
-	&.table-filled {
-		background:#fff;
-		padding: 10px 0;
-		border-top: 1px solid #eee;
-		border-bottom: 1px solid #eee;
-	}
-	&.table > thead > tr > th {
-		border-bottom-width: 1px;
-	}
-	a {
-		color: #333333;
-		&:hover,
-		&:focus,
-		&:active,
-		&:visited {
-			text-decoration: none;
-			color: #333333;
-		}
-	}
-	.fa-folder-open-o {
-		margin-right: 5px;
-	}
-}
 #app {
-	padding-top: 20px;
+	padding-top: 10px;
 	display: flex;
 	min-height: 95vh;
+	min-width: 1300px;
 	flex-direction: column;
 	header {
 		h1 {
@@ -79,5 +56,45 @@ table {
 	}
 	footer {
 		
+	}
+	h4 {
+		&.background {
+			background: #fff;
+			padding: 10px 0;
+			margin-bottom: 0;
+		}
+		font-weight: bold;
+	}
+	table {
+		margin-bottom: 40px;
+		&.table-filled {
+			background:#fff;
+			padding: 10px 0;
+			border-top: 1px solid #eee;
+			border-bottom: 1px solid #eee;
+		}
+		&.table > thead > tr > th {
+			border-bottom-width: 1px;
+		}
+		a {
+			color: #333333;
+			&:hover,
+			&:focus,
+			&:active,
+			&:visited {
+				text-decoration: none;
+				color: #333333;
+			}
+		}
+		.fa-folder-open-o {
+			margin-right: 5px;
+		}
+	}
+	.btn {
+		outline: none;
+		&:focus,
+		&:active {
+			outline: none;
+		}
 	}
 }

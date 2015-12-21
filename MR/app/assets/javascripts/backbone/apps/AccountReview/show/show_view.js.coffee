@@ -4,16 +4,29 @@
 		template: "AccountReview/show/templates/_row"
 		tagName: "tr"
 
+	class Show.Empty extends Mn.ItemView
+		template: "AccountReview/show/templates/_empty"
+		tagName: "tr"
+
 	class Show.Table extends Mn.CompositeView
 		template: "AccountReview/show/templates/table"
+		emptyView: Show.Empty
 		childView: Show.Row
 		childViewContainer: "tbody"
 
 		ui:
-			goToList: ".js-go-to-list"
+			list: ".js-list"
+			filter: "a[data-filter]"
 
 		events:
-			"click @ui.goToList" : "log"
+			"click @ui.list" : "list"
+			"click @ui.filter": "filterBy"
 
-		log: ->
-			console.log 'goToList'
+		list: ->
+			@trigger "account:list"
+			console.log 'Account List click'
+
+		filterBy: (event) ->
+			event.preventDefault()
+			@trigger "opp:filter"
+			console.log "Filtered By #{$(event.target).data('filter')}"

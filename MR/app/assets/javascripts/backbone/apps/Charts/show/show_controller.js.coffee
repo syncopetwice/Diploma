@@ -6,12 +6,12 @@
 			new Backbone.Collection []
 
 		getView: (data) ->
-			new Show.Charts
+			new Show.Chart
 				collection: data
 
 		getChartOptions: ->
 			options =
-				showPoint: true
+				showPoint: false
 				lineSmooth: true
 				axisX:
 					showGrid: false
