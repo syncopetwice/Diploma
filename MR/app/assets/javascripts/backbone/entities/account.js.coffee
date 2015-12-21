@@ -42,9 +42,20 @@
 					accountHealthScore: "2"
 				}
 			]
-			# data = new Backbone.Collection
-			# data.fetch()
-			# data
 
-	App.reqres.setHandler "entities:account", ->
+		getSortedData: (collection, options) ->
+			data = new SortedCollection(collection).setSort(options.strategy)
+			console.log data.toJSON()
+
+	# Passing Data Into Controller
+	App.reqres.setHandler "entities:account:data", ->
 		API.getData()
+
+	# Getting Collection & Strategy
+	App.vent.on "entities:account:sorted", (collection, strategy) ->
+		console.log collection, strategy
+		API.getSortedData(collection, strategy)
+
+	# Passing Sorted Data
+	App.reqres.setHandler "entities:account:sort", ->
+		API.getSortedData()

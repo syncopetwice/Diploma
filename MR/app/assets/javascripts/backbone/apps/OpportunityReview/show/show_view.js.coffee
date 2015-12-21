@@ -11,17 +11,16 @@
 
 		ui:
 			list: ".js-list"
-			filter: "a[data-filter]"
+			sort: "a[data-sort]"
 
 		events:
 			"click @ui.list" : "list"
-			"click @ui.filter": "filterBy"
+			"click @ui.sort": "sortBy"
 
 		list: ->
 			@trigger "opp:list"
 			console.log 'Opp List click'
 
-		filterBy: (event) ->
+		sortBy: (event) ->
 			event.preventDefault()
-			@trigger "opp:filter"
-			console.log "Filtered By #{$(event.target).data('filter')}"
+			console.log "Sorted By #{$(event.target).data('sort')}"

@@ -2,12 +2,12 @@
 <table class="table table-striped table-filled">
 	<thead>
 		<tr>
-			<th><a href="#" data-filter="name">Name</a></th>
-			<th><a href="#" data-filter="account">Account</a></th>
-			<th><a href="#" data-filter="strategy">Strategy</a></th>
-			<th><a href="#" data-filter="lastUpdate">Last Update</a></th>
-			<th><a href="#" data-filter="owner">Owner</a></th>
-			<th><a href="#" data-filter="accountHealthScore">Account Health Score</a></th>
+			<th><a href="#" data-sort="name">Name</a></th>
+			<th><a href="#" data-sort="account">Account</a></th>
+			<th><a href="#" data-sort="strategy">Strategy</a></th>
+			<th><a href="#" data-sort="lastUpdate">Last Update</a></th>
+			<th><a href="#" data-sort="owner">Owner</a></th>
+			<th><a href="#" data-sort="accountHealthScore">Account Health Score</a></th>
 		</tr>
 	</thead>
 	<tbody class="tbody"></tbody>

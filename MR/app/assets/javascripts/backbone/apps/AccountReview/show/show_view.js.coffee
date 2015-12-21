@@ -14,19 +14,22 @@
 		childView: Show.Row
 		childViewContainer: "tbody"
 
+		onRender: ->
+			console.log 'onRender'
+
 		ui:
 			list: ".js-list"
-			filter: "a[data-filter]"
+			sortBy: "a[data-sort]"
 
 		events:
 			"click @ui.list" : "list"
-			"click @ui.filter": "filterBy"
+			"click @ui.sortBy": "sortBy"
 
 		list: ->
 			@trigger "account:list"
 			console.log 'Account List click'
 
-		filterBy: (event) ->
+		sortBy: (event) ->
 			event.preventDefault()
-			@trigger "opp:filter"
-			console.log "Filtered By #{$(event.target).data('filter')}"
+			# console.log "Sorted By #{$(event.target).data('sort')}"
+			App.vent.trigger("entities:account:sorted", @collection, {strategy: "#{$(event.target).data('sort')}"})
