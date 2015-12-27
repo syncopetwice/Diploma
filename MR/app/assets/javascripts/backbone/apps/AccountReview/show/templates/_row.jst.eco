@@ -1,6 +1,6 @@
 <td><a href="#"><%= @name %></a></td>
-<td><a href="#"><%= @account %></a></td>
-<td><%= @strategy %></td>
-<td><%= @lastUpdate %></td>
-<td><a href="#"><%= @owner %></a></td>
-<td><%= @accountHealthScore %></td>
+<td><a href="#"><%= @username %></a></td>
+<td><%= @phone %></td>
+<td><%= @website %></td>
+<td><a href="#"><%= @address.street %></a></td>
+<td><%= @address.suite %></td>

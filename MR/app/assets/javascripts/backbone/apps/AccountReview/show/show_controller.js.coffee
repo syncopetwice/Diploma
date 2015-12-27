@@ -5,8 +5,8 @@
 		getData: ->
 			App.request "entities:account:data"
 
-		getSortedData: ->
-			App.request "entities:account:sort"
+		# getSorted: ->
+		# 	App.request "entities:account:sort"
 
 		getView: (data) ->
 			new Show.Table
@@ -19,7 +19,7 @@
 			App.AccountReviewRegion.show view
 
 		# Sorted View
-		showSorted: ->
-			data = @getSortedData()
-			view = @getView data
-			App.AccountReviewRegion.show view
+		# showSorted: ->
+		# 	data = @getSorted()
+		# 	view = @getView data
+		# 	App.AccountReviewRegion.show view

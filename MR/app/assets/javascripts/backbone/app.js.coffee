@@ -12,8 +12,8 @@
 
 	App.addInitializer ->
 		App.module("UserDetails").start()
-		App.module("Charts").start()
-		App.module("OpportunityReview").start()
+		# App.module("Charts").start()
+		# App.module("OpportunityReview").start()
 		App.module("AccountReview").start()
 
 	App.on "start", (options) ->

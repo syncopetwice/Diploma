@@ -14,9 +14,6 @@
 		childView: Show.Row
 		childViewContainer: "tbody"
 
-		onRender: ->
-			console.log 'onRender'
-
 		ui:
 			list: ".js-list"
 			sortBy: "a[data-sort]"
