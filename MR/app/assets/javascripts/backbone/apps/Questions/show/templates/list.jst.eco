@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <header>
+        <h3>User adoption</h3>
+      </header>
+      <div id="list"></div>
+      <button type="button" class="js-next btn btn-default">Next</button>
+      <br>
+      <br>
+      <div id="alert" class="text-center"></div>
+    </div>
+  </div>
+</div>
