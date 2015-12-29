@@ -16,14 +16,13 @@
 @import "bootstrap";
 @import "font-awesome";
 @import "chartist.min";
-@import url(https://fonts.googleapis.com/css?family=Oswald:400,700,300);
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,700,300);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
 body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	min-height: 100vh;
 	padding-top: 20px;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	background:#f8f8f8;
 }
 #app {
@@ -99,7 +98,95 @@ body {
 	}
 	// Questions
 	#questions-region {
+		width: 1000px;
+		padding: 0 2px;
+		margin: 20px auto;
 		background:#edf2f5;
 		border-top: 12px solid #1bbc9b;
+		font-size: 18px;
+		color: #2d3e50;
+		header {
+			padding: 30px 25px 5px 55px;
+			border-bottom: 1px solid #dde2e5;
+			h3 {
+				margin: 0;
+				font-size: 30px;
+			}
+			.counters {
+				font-size: 30px;
+				.current {
+					color: #1bbc9b;
+				}
+			}
+		}
+		main {
+			padding: 30px 25px 5px 55px;
+			// Questions
+			#list {
+				.item {
+					margin-bottom: 35px;
+					.question {
+						margin-bottom: 35px;
+					}
+					.options {
+						.option {
+							margin-left: 15px;
+							margin-bottom: 10px;
+							&:last-child {
+								margin-bottom: 0;
+							}
+							.radio {
+								display: none;
+							}
+							.radio:checked + .option-label {
+								border-bottom: 2px solid #2d3e50;
+							}
+							.option-label {
+								color: #2d3e50;
+								border-bottom: 2px solid transparent;
+								display: inline-block;
+								font-weight: bold;
+								text-transform: capitalize;
+								&:hover {
+									cursor: pointer;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		footer {
+			padding: 0 25px 20px 55px;
+			button {
+				text-transform: uppercase;
+				color: #fff;
+				background:#5ac8ed;
+				min-width: 137px;
+				padding-top: 12px;
+				padding-bottom: 10px;
+				font-size: 17px;
+				text-align: center;
+				border: none;
+				border-bottom: 2px solid #1dabcf;
+				transition: all .2s ease-in-out;
+				&:hover {
+					text-shadow: 0px 1px 0px rgba(0,0,0,.2);
+					background: lighten(#5ac8ed, 7%);
+					border-bottom-color: lighten(#1dabcf, 7%);
+				}
+				&:focus,
+				&:active {
+					outline: none;
+				}
+			}
+			#alert {
+				margin-top: 20px;
+				.alert {
+					border-radius: 0;
+					font-weight: bold;
+				}
+			}
+		}
 	}
 }

@@ -1,14 +1,22 @@
-<div class="container">
+<header>
   <div class="row">
-    <div class="col-md-6 col-md-offset-3">
-      <header>
-        <h3>User adoption</h3>
-      </header>
-      <div id="list"></div>
-      <button type="button" class="js-next btn btn-default">Next</button>
-      <br>
-      <br>
-      <div id="alert" class="text-center"></div>
+    <div class="col-md-12">
+      <h3 class="pull-left"><%= @header %></h3>
+      <div class="counters pull-right">
+        <span class="current">1</span> / <span class="total"></span>
+      </div>
     </div>
   </div>
-</div>
+</header>
+<main>
+  <div class="title"><%= @heading %></div>
+  <div id="list"></div>
+</main>
+<footer>
+  <div class="row">
+    <div class="col-md-12">
+      <button type="button" class="js-next pull-right">Next <i class="fa fa-angle-right"></i><i class="fa fa-angle-right"></i></button>
+    </div>
+  </div>
+  <div id="alert" class="text-center"></div>
+</footer>

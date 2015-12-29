@@ -9,22 +9,28 @@
     getQuestions: ->
       new Entities.Questions [
         {
-          question: 1
-          title: "Our team has high user adoption through the first year of Salesforce implementation."
-          answer: 1
-          options: [1,3]
-        }
-        {
-          question: 2
-          title: "We have identified coordinators to help with Salesforce adoption."
-          answer: 2
-          options: [2,3]
-        }
-        {
-          question: 3
-          title: "Our coordinators monitor Salesforce adoption and share metrics with team members."
-          answer: 3
-          options: [3,5]
+          header: "User Adoption"
+          heading: "User adoption is one of the most important issues considering software implementation. When users don’t accept the software, they don’t use it properly. If you have low user adoption, determine why, and take steps to improve it."
+          body: [
+            {
+              question: 1
+              title: "Our team has high user adoption through the first year of Salesforce implementation."
+              answer: true
+              options: [true,false]
+            }
+            {
+              question: 2
+              title: "We have identified coordinators to help with Salesforce adoption."
+              answer: false
+              options: [true,false]
+            }
+            {
+              question: 3
+              title: "Our coordinators monitor Salesforce adoption and share metrics with team members."
+              answer: true
+              options: [true,false]
+            }
+          ]
         }
       ]
 

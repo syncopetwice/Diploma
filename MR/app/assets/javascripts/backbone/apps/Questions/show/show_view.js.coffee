@@ -19,22 +19,24 @@
       # Added checked radiobuttons on load
       $('.options').each (index, value) ->
         $(value).find(".radio:first").attr("checked", "checked")
-      # @ui.next.trigger("click")
 
     next: (event) ->
       # Get correct answers
-      ANSWERS = App.request "entities:answers"
+      answers = App.request "entities:answers"
       # Get values of user's radiobuttons
       radio =  $(".radio:checked")
       # Init Array of user's answers
       arr = []
       radio.each (index,value) ->
         # 1. Push values to array
-        # 2. Convert string values to boolean
+        # 2. Parse data
         arr.push(JSON.parse($(value).attr("value")))
 
+      console.log "Arr: #{arr}"
+
       # Compare Arrays : Correct Answers & User's Answers
-      compare = _.isEqual(arr, ANSWERS)
+      compare = _.isEqual(arr, answers)
+      console.log "Compare: #{compare}"
       if(compare)
         @ui.alert.html("<div class='alert alert-success' role='alert'>Success</div>")
       else

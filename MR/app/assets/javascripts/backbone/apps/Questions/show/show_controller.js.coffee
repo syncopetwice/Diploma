@@ -11,5 +11,6 @@
 
     show: ->
       questions = @getQuestions()
+      console.log questions
       view = @getQuestionsView questions
       App.QuestionsRegion.show view
