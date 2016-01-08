@@ -5,8 +5,8 @@
   App.rootRoute = "user"
 
   App.addRegions
-    UserRegion: "#user-region"
-    AccountReviewRegion: "#account-review-region"
+    # UserRegion: "#user-region"
+    # AccountReviewRegion: "#account-review-region"
     QuestionsRegion: "#questions-region"
     # UserDetailsRegion: '#user-details-region'
     # ChartsRegion: '#charts-region'
@@ -25,7 +25,7 @@
     if options.history
       if Backbone.history
         Backbone.history.start()
-        @navigate(@rootRoute, trigger: true) if @getCurrentRoute() is ""
+        # @navigate(@rootRoute, trigger: true) if @getCurrentRoute() is ""
     else
       throw new Error ("History is off")
 

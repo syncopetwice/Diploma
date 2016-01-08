@@ -1,0 +1,9 @@
+<div id="result">
+  <header>
+    <h3>Result</h3>
+  </header>
+  <main>
+    <div class="pre-header"><%= @resultCounter %></div>
+    <div><%= @resultTitle %></div>
+  </main>
+</div>

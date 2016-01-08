@@ -1,19 +1,29 @@
 <div class="container-fluid">
 	<div id="app">
-		<header>
-			<div class="logotype">
-				<img src="<%= image_url('backbone.png') %>" alt="">
+		<header class="head">
+			<h1>Salesforce Optimization Self-Assessment Questionnaire</h1>
+			<p>
+				Salesforce users all have one ultimate goal – to increase sales exponentially. When Salesforce is optimized, that goal can become more of a reality.
+			</p>
+			<p>
+				Through our work with many Salesforce customers during the past few years, we have developed a list of common areas that could be used to improve ROI.
+			</p>
+			<div class="steps">
+				<div class="step">
+					<span>1.</span> Choose <strong>“True”</strong> or <strong>“False”</strong> next to the following statements.
+				</div>
+				<div class="step">
+					<span>2.</span> <strong>Receive your results</strong> at the end of the questionnaire.
+				</div>
+				<div class="step">
+					<span>3.</span> Use them to <strong>improve</strong> your Salesforce instance.
+				</div>
 			</div>
 		</header>
 		<main>
-			<div id="user-region"></div>
+			<!-- <div id="user-region"></div> -->
 			<div id="questions-region"></div>
 		</main>
-		<footer>
-			<div class="text-center">
-				Created by Oleg Drozdov. 2015
-			</div>
-		</footer>
 	</div>
 </div>
 
@@ -22,7 +32,6 @@
 		var options = {
 			history: true,
 		};
-
 		MR.start(options);
 	});
 <% end %>

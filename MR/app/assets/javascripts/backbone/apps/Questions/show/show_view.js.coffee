@@ -2,27 +2,40 @@
 
   class Show.QuestionView extends Mn.ItemView
     template: "Questions/show/templates/_item"
+    className: "chapter"
 
   class Show.QuestionsView extends Mn.CompositeView
     template: "Questions/show/templates/list"
     childView: Show.QuestionView
-    childViewContainer: "#list"
+    childViewContainer: "#chapters"
 
     ui:
       "next"  : ".js-next"
-      "alert" : "#alert"
+      "result": ".js-result"
 
     events:
-      "click @ui.next" : "next"
-
+      "click @ui.next"   : "next"
+      "click @ui.result" : "result"
     onShow: ->
+      # Show only first chapter
+      chapters = $('#chapters').find(".chapter")
+      chapters.hide().first().show()
       # Added checked radiobuttons on load
-      $('.options').each (index, value) ->
+      $('.question-options').each (index, value) ->
         $(value).find(".radio:first").attr("checked", "checked")
+      # Added a counter of all chapters
+      $(".counters .total").html(@collection.length);
+
+    onRender: ->
+       @$el = @$el.children()
+       @$el.unwrap()
+       @setElement @$el
 
     next: (event) ->
-      # Get correct answers
-      answers = App.request "entities:answers"
+      currentChapter = $(event.currentTarget).closest(".chapter")
+      currentChapter.hide().next().show()
+
+    result: (event) ->
       # Get values of user's radiobuttons
       radio =  $(".radio:checked")
       # Init Array of user's answers
@@ -31,13 +44,18 @@
         # 1. Push values to array
         # 2. Parse data
         arr.push(JSON.parse($(value).attr("value")))
+      trueCounter = _.filter(arr, (val) -> val == true).length
+      console.log "True Counter: #{trueCounter}"
+      # Get results data from entities
+      results = App.request "entities:results"
+      results.each (result) ->
+        if (_.contains(result.get("valid"), trueCounter) || (trueCounter > result.get("valid")))
+          # console.log result.get("resultCounter")
+          # console.log result.get("resultTitle")
+          # console.log result
+          App.reqres.setHandler "entities:result", ->
+            result
+          App.Questions.Show.Controller.showResults()
 
-      console.log "Arr: #{arr}"
-
-      # Compare Arrays : Correct Answers & User's Answers
-      compare = _.isEqual(arr, answers)
-      console.log "Compare: #{compare}"
-      if(compare)
-        @ui.alert.html("<div class='alert alert-success' role='alert'>Success</div>")
-      else
-        @ui.alert.html("<div class='alert alert-danger' role='alert'>Fail</div>")
+  class Show.ResultView extends Mn.ItemView
+    template: "Questions/show/templates/result"
