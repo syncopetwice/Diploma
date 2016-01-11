@@ -171,14 +171,19 @@ body {
 								.question-option {
 									margin-left: 15px;
 									margin-bottom: 10px;
+									position: relative;
+									padding-left: 30px;
 									&:last-child {
 										margin-bottom: 0;
 									}
 									.radio {
-										display: none;
-									}
-									.radio:checked + .option-label {
-										border-bottom: 2px solid #2d3e50;
+										// display: none;
+										position: absolute;
+										top: 2px;
+										left: 0;
+										margin: 0;
+										width: 20px;
+										height: 20px;
 									}
 									.option-label {
 										color: #2d3e50;
@@ -218,14 +223,6 @@ body {
 						&:active {
 							outline: none;
 						}
-						&.js-result {
-							background: lighten(#1bbc9b, 7%);
-							border-bottom: 2px solid #1bbc9b;
-							&:hover {
-								background: lighten(#1bbc9b, 10%);
-								border-bottom-color: lighten(#1bbc9b, 4%);
-							}
-						}
 					}
 				}
 			}
@@ -235,25 +232,59 @@ body {
 			padding: 0 2px;
 			margin: 20px auto;
 			background:#edf2f5;
-			border-top: 12px solid #FFD740;
 			font-size: 18px;
 			color: #2d3e50;
-			min-height: 30vh;
+			// min-height: 30vh;
 			header {
-				padding: 30px 25px 5px 55px;
+				padding: 15px 30px;
 				border-bottom: 1px solid #dde2e5;
+				&.good {background: #1bbc9b;}
+				&.well {background: #aa98d1;}
+				&.bad  {background: #f8862c}
 				h3 {
 					margin: 0;
+					color: #fff;
 					font-size: 30px;
 				}
 			}
 			main {
-				padding: 30px 25px 30px 55px;
+				padding: 35px 25px 25px 30px;
 				.pre-header {
 					font-size: 18px;
 					font-weight: bold;
 					text-transform: capitalize;
 					margin-bottom: 20px;
+				}
+			}
+			footer {
+				padding: 30px 25px 30px 55px;
+				text-align: center;
+				a {
+					display: inline-block;
+					text-transform: uppercase;
+					color: #fff;
+					background:#5ac8ed;
+					min-width: 340px;
+					padding-top: 12px;
+					padding-bottom: 10px;
+					padding-left: 10px;
+					padding-right: 10px;
+					font-size: 17px;
+					text-align: center;
+					border: none;
+					border-bottom: 2px solid #1dabcf;
+					transition: all .2s ease-in-out;
+					text-decoration: none;
+					&:hover {
+						text-decoration: none;
+						text-shadow: 0px 1px 0px rgba(0,0,0,.2);
+						background: lighten(#5ac8ed, 7%);
+						border-bottom-color: lighten(#1dabcf, 7%);
+					}
+					&:focus,
+					&:active {
+						outline: none;
+					}
 				}
 			}
 		}

@@ -1,9 +1,12 @@
 <div id="result">
-  <header>
-    <h3>Result</h3>
+  <header class="<%= @class %>">
+    <h3>Your results</h3>
   </header>
   <main>
     <div class="pre-header"><%= @resultCounter %></div>
     <div><%= @resultTitle %></div>
   </main>
+  <footer>
+    <a href="#" class="js-order">Order Salesforce optimization</a>
+  </footer>
 </div>

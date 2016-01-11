@@ -16,6 +16,7 @@
     events:
       "click @ui.next"   : "next"
       "click @ui.result" : "result"
+
     onShow: ->
       # Show only first chapter
       chapters = $('#chapters').find(".chapter")
@@ -45,17 +46,32 @@
         # 2. Parse data
         arr.push(JSON.parse($(value).attr("value")))
       trueCounter = _.filter(arr, (val) -> val == true).length
-      console.log "True Counter: #{trueCounter}"
+      # console.log "True Counter: #{trueCounter}"
       # Get results data from entities
       results = App.request "entities:results"
       results.each (result) ->
         if (_.contains(result.get("valid"), trueCounter) || (trueCounter > result.get("valid")))
-          # console.log result.get("resultCounter")
-          # console.log result.get("resultTitle")
-          # console.log result
           App.reqres.setHandler "entities:result", ->
             result
           App.Questions.Show.Controller.showResults()
 
+  # Result
   class Show.ResultView extends Mn.ItemView
     template: "Questions/show/templates/result"
+
+    ui:
+      "order": ".js-order"
+
+    events:
+      "click @ui.order" : "order"
+
+    order: (event) ->
+      console.log event
+
+    onRender: ->
+       @$el = @$el.children()
+       @$el.unwrap()
+       @setElement @$el
+
+    # repeat: (event) ->
+    #   App.Questions.Show.Controller.show()

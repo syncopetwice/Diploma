@@ -144,18 +144,21 @@
     getResults: ->
       new Entities.Results [
         {
+          class: "good"
           valid: [15]
-          resultCounter: "u marked 15 or more answers as TRUE:"
+          resultCounter: "You have marked 15 or more answers as TRUE:"
           resultTitle: "You are well on your way to being the ultimate Salesforce champion but there is always room for improvement. Make a list of the topics and questions that you marked false, then bring those up for discussion with your team. Develop a plan to overcome the challenges identified."
         }
         {
+          class: "well"
           valid: [7...15]
-          resultCounter: "If you marked between 7 and 15 answers as TRUE:"
+          resultCounter: "You have marked between 7 and 15 answers as TRUE:"
           resultTitle: "You are doing very well in your Salesforce implementation and support processes but opportunities exist for key improvements. Don’t try to address everything at one time. Start with your top three paint points and decide how you will approach them. Get advice from an expert on how to best tackle your top three priorities."
         }
         {
+          class: "bad"
           valid: [0...7]
-          resultCounter: "If you marked less than 7 as TRUE:"
+          resultCounter: "You have marked less than 7 as TRUE:"
           resultTitle: "You are likely experiencing significant issues with user adoption and ROI in Salesforce. But, it’s not time to panic yet. The first step in improving these metrics is defining where the problems are. Your best bet is to hire a Salesforce consulting partner who understands these problems and can set you on a clear path to success."
         }
       ]
