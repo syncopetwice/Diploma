@@ -5,8 +5,9 @@
 		getData: ->
 			App.request "entities:account:data"
 
-		# getSorted: ->
-		# 	App.request "entities:account:sort"
+		getSorted: ->
+			App.request "entities:account:sort"
+			console.log "getSorted"
 
 		getView: (data) ->
 			new Show.Table

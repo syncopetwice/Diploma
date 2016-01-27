@@ -12,17 +12,22 @@
 			users.fetch()
 			users
 
-		# getSortedData: (collection, options) ->
-		# 	data = new SortedCollection(collection).setSort(options.strategy)
+		getSortedData: (collection, options) ->
+			data = new SortedCollection(collection)
+				.setSort(options.strategy)
+				.reverseSort()
+
+			data.each (key, value) ->
+				console.log value, key
 
 	# Passing Data Into Controller
 	App.reqres.setHandler "entities:account:data", ->
 		API.getData()
 
 	# Getting Collection & Strategy
-	# App.vent.on "entities:account:sorted", (collection, strategy) ->
-	# 	API.getSortedData(collection, strategy)
+	App.vent.on "entities:account:sorted", (collection, strategy) ->
+		API.getSortedData(collection, strategy)
 
 	# Passing Sorted Data
-	# App.reqres.setHandler "entities:account:sort", ->
-	# 	API.getSortedData()
+	App.reqres.setHandler "entities:account:sort", ->
+		API.getSortedData()
