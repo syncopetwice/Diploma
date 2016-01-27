@@ -5,6 +5,8 @@
 	class Entities.AccountCollection extends Backbone.Collection
 		model: Entities.Account
 		url: "http://jsonplaceholder.typicode.com/users"
+		comparator: (models) ->
+
 
 	API = 
 		getData: ->
@@ -13,12 +15,7 @@
 			users
 
 		getSortedData: (collection, options) ->
-			data = new SortedCollection(collection)
-				.setSort(options.strategy)
-				.reverseSort()
-
-			data.each (key, value) ->
-				console.log value, key
+			
 
 	# Passing Data Into Controller
 	App.reqres.setHandler "entities:account:data", ->

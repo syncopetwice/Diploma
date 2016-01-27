@@ -19,8 +19,14 @@
 			sortBy: "a[data-sort]"
 
 		events:
-			"click @ui.list" : "list"
-			"click @ui.sortBy": "sortBy"
+			"click @ui.list"   : "list"
+			"click @ui.sortBy" : "sortBy"
+
+		collectionEvents:
+			"sort" : "test"
+
+		test: ->
+			console.log "collection event"
 
 		list: ->
 			@trigger "account:list"

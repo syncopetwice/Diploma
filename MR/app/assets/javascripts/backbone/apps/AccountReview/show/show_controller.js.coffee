@@ -7,7 +7,6 @@
 
 		getSorted: ->
 			App.request "entities:account:sort"
-			console.log "getSorted"
 
 		getView: (data) ->
 			new Show.Table
@@ -20,7 +19,7 @@
 			App.AccountReviewRegion.show view
 
 		# Sorted View
-		# showSorted: ->
-		# 	data = @getSorted()
-		# 	view = @getView data
-		# 	App.AccountReviewRegion.show view
+		showSorted: ->
+			data = @getSorted()
+			view = @getView data
+			App.AccountReviewRegion.show view
